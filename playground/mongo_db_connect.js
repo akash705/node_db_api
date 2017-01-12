@@ -11,25 +11,32 @@ var {name}= ob;
 console.log(name)
 
 //insertion command
-// MongoClient.connect("mongodb://localhost:27017/ToDOs" , (err , db)=>{
+MongoClient.connect("mongodb://localhost:27017/ToDOs" , (err , db)=>{
 
-// 	if(err)
-// 	{
-// 		return console.log("connection failde");
-// 	}
-// 	console.log("connection successfully");
+	if(err)
+	{
+		return console.log("connection failde");
+	}
+	console.log("connection successfully");
 
-// 	// no database created until we insert to create one we call the method
-// 	//db.collection() 
-// 	db.collection("todo").insertOne({
-// 		"name" : "Akash Mishra",
-// 		"who are you " : "Developer"
+	// no database created until we insert to create one we call the method
+	//db.collection() 
+	db.collection("todo").insertMany([
+		{
+		"name" : "shamsher vinayak",
+		"who are you " : "nalayak"
 
-// 	}
-// 	,(err,result)=>{
+		},
+		{
+		"name" : "harakhor panday  ",
+		"who are you " : "sdjlasj"
+
+		}
+		]
+	,(err,result)=>{
 
 		
-// 	});
+	});
 	
 
 	// db.collection('users').insertOne( {
@@ -55,4 +62,4 @@ console.log(name)
 	
 // 	db.close();	
 
-// } );
+} );

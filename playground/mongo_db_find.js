@@ -9,7 +9,7 @@ MongoClient.connect("mongodb://localhost:27017/ToDOs", ( err,db) =>
 
 	console.log("connection successfully");
 	var a="Akash Mishra";
-	db.collection('todo').find({name:"Akash Mishra","who are you":"Developer"}).toArray().then( (doc)=>
+	db.collection('todo').find().count().then( (doc)=>
 	{
 			//console.log(`total count of colelction is ${doc}`);
 			console.log(JSON.stringify(doc,undefined,2))
